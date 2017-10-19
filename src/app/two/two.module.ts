@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { TwoRoutingModule } from './two-routing.module';
 import { TwoComponent } from './two.component';
+import { TwoChildComponent } from './two-child/two-child.component';
 
 @NgModule({
   imports: [
     CommonModule,
     TwoRoutingModule
   ],
-  declarations: [TwoComponent]
+  declarations: [TwoComponent, TwoChildComponent]
 })
 export class TwoModule { }
