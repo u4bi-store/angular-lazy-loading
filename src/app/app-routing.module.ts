@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: './one/one.module#OneModule'
   },
   {
+    path: 'two',
+    loadChildren: './two/two.module#TwoModule'
+  },
+  {
     path: '**',
     redirectTo: ''
   }
