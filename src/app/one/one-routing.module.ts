@@ -1,10 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { OneComponent } from './one.component';
+import { OneChildComponent } from './one-child/one-child.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: OneComponent,
+    children: [
+      {
+        path: 'one-child',
+        component: OneChildComponent
+      }
+    ]
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  declarations : [OneComponent, OneChildComponent],
+  exports: [RouterModule, OneComponent, OneChildComponent]
 })
 export class OneRoutingModule { }
